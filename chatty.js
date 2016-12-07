@@ -11,3 +11,8 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
   }
 
 })
+
+document.querySelector("#clear-messages").addEventListener("click", () => {
+  document.querySelector("#main-body").innerHTML = "";
+
+})
