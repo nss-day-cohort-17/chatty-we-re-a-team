@@ -9,6 +9,7 @@ h3 {
 #main-body {
   margin: 0 auto;
   width: 75%;
+  min-height: 10em;
   border: 1px solid black;
 }
 
