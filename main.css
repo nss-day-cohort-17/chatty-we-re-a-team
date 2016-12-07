@@ -36,3 +36,11 @@ h3 {
   font-size: 30px
 
 }
+
+#checkB {
+  padding-left: 30%;
+}
+
+label {
+  padding-left: 1em;
+}
