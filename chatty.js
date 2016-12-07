@@ -41,6 +41,16 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
   clearButton.addEventListener("click", () => {
   document.querySelector("#main-body").innerHTML = "";
   clearButton.setAttribute("disabled", "disabled")
-
-
 })
+
+// Listener on dark-theme checkbox.  When clicked, addAttribute function will run with darkTheme variable as argument
+var darkTheme = document.querySelector("#dark-theme");
+darkTheme.addEventListener("click", () => {
+  addAttribute(darkTheme);
+});
+
+// Listener on large-text checkbox.  When clicked, addAttribute function will run with largeText variable as argument
+var largeText = document.querySelector("#large-text");
+largeText.addEventListener("click", () => {
+  addAttribute(largeText);
+});
