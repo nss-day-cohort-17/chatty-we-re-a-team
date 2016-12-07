@@ -2,18 +2,21 @@
 <html>
 <head>
         <title>Chatty</title>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <nav>
+  <nav id="navBar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container"></div>
     <element>Chatty!</element>
     <input type="text" id="message_id" style="width : 70%" placeholder="EnterMessage">
-    <button id="clear_body" >Create Message</button>
+    <button id="clear_body">Create Message</button>
   </nav>
 
   <h3>Messages:</h3>
   <div id="main-body">
     <p>placeholder text</p>
   </div>
+
 </body>
 </html>
