@@ -1,5 +1,37 @@
+body {
+  background-color: lightgray;
+}
+
+h3 {
+  padding-left: 50px;
+  font-family: "Open Sans", serif
+}
 #main-body {
   margin: 0 auto;
   width: 75%;
   border: 1px solid black;
+}
+
+#navBar {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  padding-top: 10px;
+  background-color: lightgray;
+}
+
+#message_id {
+ border: 1px solid black;
+}
+
+#createMess {
+ border: 1px solid black;
+ border-radius: 10px;
+}
+
+#logo {
+  font-family: "Oleo Script", serif;
+  color: teal;
+  font-size: 30px
+
 }
