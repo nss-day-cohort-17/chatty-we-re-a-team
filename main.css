@@ -3,17 +3,18 @@ body {
 }
 
 h3 {
-  padding-left: 50px;
+  padding-left: 10em;
   font-family: "Open Sans", serif
 }
 #main-body {
   margin: 0 auto;
-  width: 75%;
+  width: 50%;
   min-height: 10em;
   border: 1px solid black;
 }
 
 #navBar {
+  width: 100%;
   display: inline-block;
   list-style-type: none;
   text-align: center;
@@ -25,7 +26,7 @@ h3 {
  border: 1px solid black;
 }
 
-#createMess {
+#clear-messages {
  border: 1px solid black;
  border-radius: 10px;
 }
