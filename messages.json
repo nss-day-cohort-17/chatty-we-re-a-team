@@ -1,0 +1,19 @@
+{
+        "messages" : [
+                {
+                        "message" : "I am a junior develop looking for a new job."
+                },
+                {
+                        "message" : "Senior developer looking for freelance work."
+                },
+                {
+                        "message" : "Looking for full stack developers."
+                },
+                {
+                        "message" : "In need of UX/UI specialist."
+                },
+                {
+                        "message" : "Seeking front-end developers."
+                }
+        ]
+}
