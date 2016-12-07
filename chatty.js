@@ -8,11 +8,14 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
     newMessage.innerHTML = userMessage;
 
     document.querySelector("#main-body").appendChild(newMessage);
+    clearButton.removeAttribute("disabled")
   }
 
 })
-
-document.querySelector("#clear-messages").addEventListener("click", () => {
+ var clearButton = document.querySelector("#clear-messages")
+  clearButton.addEventListener("click", () => {
   document.querySelector("#main-body").innerHTML = "";
+  clearButton.setAttribute("disabled", "disabled")
+
 
 })
