@@ -1,3 +1,10 @@
+
+function addDeleteButtonToMessage(divElement) {
+  var deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  divElement.appendChild(deleteButton);
+}
+
 document.querySelector("#message_id").addEventListener("keypress", (e) => {
   // console.log(e);
   if (e.key === "Enter") {
