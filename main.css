@@ -44,3 +44,12 @@ h3 {
 label {
   padding-left: 1em;
 }
+
+.dark-theme-class {
+  background-color: black;
+  color: white;
+}
+
+.large-text-class {
+  font-size: 1.5em;
+}
