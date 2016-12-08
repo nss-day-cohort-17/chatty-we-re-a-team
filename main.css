@@ -6,6 +6,12 @@ h3 {
   padding-left: 50px;
   font-family: "Open Sans", serif
 }
+
+p {
+  display: inline;
+  margin-right: 2em;
+}
+
 #main-body {
   margin: 0 auto;
   width: 75%;
@@ -43,4 +49,13 @@ h3 {
 
 label {
   padding-left: 1em;
+}
+
+.dark-theme-class {
+  background-color: black;
+  color: white;
+}
+
+.large-text-class {
+  font-size: 1.5em;
 }
