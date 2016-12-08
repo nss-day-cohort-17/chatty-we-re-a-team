@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,20 +6,58 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oleo+Script">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
         <link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
-<body>
 
-  <nav id="navBar" class="navbar-fixed-top">
 
-    <div class="container"></div>
-    <element id="logo">Chatty!</element>
-    <input type="text" id="message_id" style="width : 50%" placeholder="Enter Message">
-    <button id="clear-messages">Clear all messages</button>
-  </nav>
+<body class="image-bg-fluid-height img-responsive img-center">
 
-  <br>
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Chatty</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li> -->
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter message here">
+        </div>
+        <button type="submit" class="btn btn-default">Clear all messages</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/nss-day-cohort-17/chatty-we-re-a-team/tree/master"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Developers<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">James West</a></li>
+            <li><a href="#">Ashley Irwin</a></li>
+            <li><a href="#">Alana Smith</a></li>
+            <li><a href="#">Ben Conner</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<br>
   <br>
   <br>
   <div id="checkB">
@@ -28,15 +67,21 @@
     <input type="checkbox" id="large-text" name="Large text">
   </div>
 
-  <h3>Messages:</h3>
+  <h3 class="text-center">Messages:</h3>
   <div id="main-body">
     <div>
-      <p>placeholder text</p>
+      <p class="scrollme">placeholder text</p>
       <button>delete</button>
     </div>
   </div>
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="chatty.js" charset="utf-8"></script>
+  <script src="https://use.fontawesome.com/f596f1db68.js"></script>
 
 </body>
 
