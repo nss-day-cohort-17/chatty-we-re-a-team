@@ -1,6 +1,6 @@
 var mainBodyDiv = document.querySelector("#main-body");
 var bodyVar = document.querySelector("body");
-var userInput =document.querySelector("input")
+var userInput =document.querySelector("#usersMessage")
 var editNode;
 var myRequest = new XMLHttpRequest();
 
@@ -66,8 +66,9 @@ function toggleClass(checkbox) {
 function createMessage(e) {
   if (e.key === "Enter") {
     var userMessage = userInput.value;
-    userInput.value = "";
     addMessage(userMessage)
+    userInput.value = "";
+
   }
 }
 
