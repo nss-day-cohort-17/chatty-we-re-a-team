@@ -77,11 +77,15 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
 
 
 
+
 mainBodyDiv.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     var buttonParent = e.target.parentNode;
     console.log(buttonParent);
     mainBodyDiv.removeChild(buttonParent);
+    if (!mainBodyDiv.querySelector("div")) {
+      clearButton.setAttribute("disabled", "disabled")
+    }
   }
 })
 
