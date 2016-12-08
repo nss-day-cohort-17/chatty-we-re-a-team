@@ -1,4 +1,7 @@
 
+var mainBodyDiv = document.querySelector("#main-body");
+
+
 
 function addDeleteButtonToMessage(divElement) {
   var deleteButton = document.createElement("button");
@@ -31,6 +34,7 @@ function toggleClass(checkbox) {
 
 }
 
+
 document.querySelector("#message_id").addEventListener("keypress", (e) => {
   // console.log(e);
   if (e.key === "Enter") {
@@ -39,19 +43,35 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
     var messageDiv = document.createElement("div");
     var newMessage = document.createElement("p");
     newMessage.innerHTML = userMessage;
+
+
+    mainBodyDiv.appendChild(newMessage);
+
     messageDiv.appendChild(newMessage);
     addDeleteButtonToMessage(messageDiv);
     document.querySelector("#main-body").appendChild(messageDiv);
+
     clearButton.removeAttribute("disabled")
   }
 })
 
  var clearButton = document.querySelector("#clear-messages")
   clearButton.addEventListener("click", () => {
-  document.querySelector("#main-body").innerHTML = "";
+  mainBodyDiv.innerHTML = "";
   clearButton.setAttribute("disabled", "disabled")
 })
 
+
+
+
+
+mainBodyDiv.addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON") {
+    var buttonParent = e.target.parentNode;
+    console.log(buttonParent);
+    mainBodyDiv.removeChild(buttonParent);
+  }
+})
 
 
 // Listener on dark-theme checkbox.  When clicked, addAttribute function will run with darkTheme variable as argument
