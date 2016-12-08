@@ -1,3 +1,14 @@
+var myRequest = new XMLHttpRequest();
+
+function parseJSON(e) {
+  var data = JSON.parse(e.target.responseText)
+    console.log(data);
+}
+
+myRequest.addEventListener("load", parseJSON);
+myRequest.open("GET", "messages.json");
+myRequest.send();
+
 document.querySelector("#message_id").addEventListener("keypress", (e) => {
   // console.log(e);
   if (e.key === "Enter") {
