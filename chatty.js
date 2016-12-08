@@ -1,4 +1,5 @@
 var mainBodyDiv = document.querySelector("#main-body");
+var bodyVar = document.querySelector("body");
 var myRequest = new XMLHttpRequest();
 
 function parseJSON(e) {
@@ -19,7 +20,6 @@ function addDeleteButtonToMessage(divElement) {
   deleteButton.textContent = "Delete";
   divElement.appendChild(deleteButton);
 
-let bodyVar = document.querySelector("body");
 }
 // Executed when a checkbox is clicked, checks to see if the checkbox has the attribute checked,
 // if it does not, the function adds it to the checkbox, then calls toggleClass function with checkbox as argument,  // which is from the eventListener, so checkbox will either be darkTheme or largeText
