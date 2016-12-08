@@ -1,6 +1,7 @@
 var mainBodyDiv = document.querySelector("#main-body");
 var bodyVar = document.querySelector("body");
 var userInput =document.querySelector("input")
+var editNode;
 var myRequest = new XMLHttpRequest();
 
 function parseJSON(e) {
