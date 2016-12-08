@@ -10,19 +10,18 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     var userMessage = document.querySelector("input").value;
     document.querySelector("input").value = "";
-    console.log(userMessage);
-    var newMessage = document.createElement("p")
+    var messageDiv = document.createElement("div");
+    var newMessage = document.createElement("p");
     newMessage.innerHTML = userMessage;
-
-    document.querySelector("#main-body").appendChild(newMessage);
+    messageDiv.appendChild(newMessage);
+    addDeleteButtonToMessage(messageDiv);
+    document.querySelector("#main-body").appendChild(messageDiv);
     clearButton.removeAttribute("disabled")
   }
-
 })
+
  var clearButton = document.querySelector("#clear-messages")
   clearButton.addEventListener("click", () => {
   document.querySelector("#main-body").innerHTML = "";
   clearButton.setAttribute("disabled", "disabled")
-
-
 })
