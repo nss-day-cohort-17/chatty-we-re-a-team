@@ -81,19 +81,27 @@ userInput.addEventListener("keypress", createMessage)
   clearButton.setAttribute("disabled", "disabled")
 })
 
+function finishEditFunc(e) {
+  if (e.key === "Enter") {
+    var char = userInput.value;
+    editNode.querySelector("p").innerHTML = char;
+    userInput.value = "";
+    userInput.addEventListener("keypress", createMessage)
+    userInput.removeEventListener("keyup", editButtonFunc)
+  }
+}
 
 function editButtonFunc(e) {
     var char = userInput.value;
     editNode.querySelector("p").innerHTML = char;
     userInput.removeEventListener("keypress", createMessage)
-      if (e.key === "Enter") {
-        var char = userInput.value;
-        editNode.querySelector("p").innerHTML = char;
-        userInput.value = "";
-        userInput.addEventListener("keypress", createMessage)
-        userInput.removeEventListener("keypress", editButtonFunc)
-
-      }
+    if (e.key === "Enter") {
+      var char = userInput.value;
+      editNode.querySelector("p").innerHTML = char;
+      userInput.value = "";
+      userInput.addEventListener("keypress", createMessage)
+      userInput.removeEventListener("keyup", editButtonFunc)
+    }
   }
 
 mainBodyDiv.addEventListener("click", (e) => {
@@ -108,7 +116,7 @@ mainBodyDiv.addEventListener("click", (e) => {
     console.log("hey")
     editNode = e.target.parentNode;
     userInput.value = editNode.querySelector("p").innerHTML
-    userInput.addEventListener("keypress", editButtonFunc)
+    userInput.addEventListener("keyup", editButtonFunc)
     }
 })
 
