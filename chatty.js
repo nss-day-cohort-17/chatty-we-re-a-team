@@ -1,5 +1,6 @@
 var mainBodyDiv = document.querySelector("#main-body");
 var bodyVar = document.querySelector("body");
+var userInput =document.querySelector("input")
 var myRequest = new XMLHttpRequest();
 
 function parseJSON(e) {
@@ -63,15 +64,11 @@ function toggleClass(checkbox) {
 
 
 
-document.querySelector("#message_id").addEventListener("keypress", (e) => {
+userInput.addEventListener("keypress", (e) => {
   // console.log(e);
   if (e.key === "Enter") {
-    var userMessage = document.querySelector("input").value;
-    document.querySelector("input").value = "";
-    addMessage(userMessage)
-  }else{
-    var char = document.querySelector("input").value;
-    userMessage += char;
+    var userMessage = userInput.value;
+    userInput.value = "";
     addMessage(userMessage)
   }
 })
@@ -81,9 +78,6 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
   mainBodyDiv.innerHTML = "";
   clearButton.setAttribute("disabled", "disabled")
 })
-
-
-
 
 
 
@@ -98,8 +92,23 @@ mainBodyDiv.addEventListener("click", (e) => {
   }else if (e.target.textContent === "Edit"){
     console.log("hey")
     var editNode = e.target.parentNode;
-    document.querySelector("input").value = editNode.querySelector("p").innerHTML
-  }
+    userInput.value = editNode.querySelector("p").innerHTML
+
+    userInput.addEventListener("keypress", (e) => {
+      var char = userInput.value;
+      editNode.querySelector("p").innerHTML = char;
+
+        if (e.key === "Enter") {
+
+          var char = userInput.value;
+          editNode.querySelector("p").innerHTML = char;
+          userInput.value = "";
+        }
+    })
+
+
+    }
+
 })
 
 
