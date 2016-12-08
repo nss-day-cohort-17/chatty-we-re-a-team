@@ -9,15 +9,23 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
     var newMessage = document.createElement("p")
     newMessage.innerHTML = userMessage;
 
-    document.querySelector("#main-body").appendChild(newMessage);
+    mainBodyDiv.appendChild(newMessage);
     clearButton.removeAttribute("disabled")
   }
 
 })
  var clearButton = document.querySelector("#clear-messages")
   clearButton.addEventListener("click", () => {
-  document.querySelector("#main-body").innerHTML = "";
+  mainBodyDiv.innerHTML = "";
   clearButton.setAttribute("disabled", "disabled")
 
 
+})
+
+mainBodyDiv.addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON") {
+    var buttonParent = e.target.parentNode;
+    console.log(buttonParent);
+    mainBodyDiv.removeChild(buttonParent);
+  }
 })
