@@ -82,6 +82,19 @@ userInput.addEventListener("keypress", createMessage)
 })
 
 
+function editButtonFunc(e) {
+    var char = userInput.value;
+    editNode.querySelector("p").innerHTML = char;
+    userInput.removeEventListener("keypress", createMessage)
+      if (e.key === "Enter") {
+        var char = userInput.value;
+        editNode.querySelector("p").innerHTML = char;
+        userInput.value = "";
+        userInput.addEventListener("keypress", createMessage)
+        userInput.removeEventListener("keypress", editButtonFunc)
+
+      }
+  }
 
 mainBodyDiv.addEventListener("click", (e) => {
   if (e.target.textContent === "Delete") {
@@ -93,24 +106,10 @@ mainBodyDiv.addEventListener("click", (e) => {
     }
   }else if (e.target.textContent === "Edit"){
     console.log("hey")
-    var editNode = e.target.parentNode;
+    editNode = e.target.parentNode;
     userInput.value = editNode.querySelector("p").innerHTML
-
-    userInput.addEventListener("keypress", (e) => {
-      var char = userInput.value;
-      editNode.querySelector("p").innerHTML = char;
-
-        if (e.key === "Enter") {
-
-          var char = userInput.value;
-          editNode.querySelector("p").innerHTML = char;
-          userInput.value = "";
-        }
-    })
-
-
+    userInput.addEventListener("keypress", editButtonFunc)
     }
-
 })
 
 
