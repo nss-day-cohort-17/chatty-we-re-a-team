@@ -5,14 +5,28 @@ var myRequest = new XMLHttpRequest();
 function parseJSON(e) {
   var data = JSON.parse(e.target.responseText)
     console.log(data);
+    for (var i = 0; i < data.messages.length; i++) {
+      addMessage(data.messages[i].message)
+      console.log(data.messages[i].message)
+    }
 }
 
 myRequest.addEventListener("load", parseJSON);
 myRequest.open("GET", "messages.json");
 myRequest.send();
 
+function addMessage(userInput){
 
+  var messageDiv = document.createElement("div");
+  var newMessage = document.createElement("p");
+  newMessage.innerHTML = userInput;
 
+  messageDiv.appendChild(newMessage);
+  addDeleteButtonToMessage(messageDiv);
+  mainBodyDiv.appendChild(messageDiv);
+
+  clearButton.removeAttribute("disabled")
+ }
 
 
 function addDeleteButtonToMessage(divElement) {
@@ -52,18 +66,8 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     var userMessage = document.querySelector("input").value;
     document.querySelector("input").value = "";
-    var messageDiv = document.createElement("div");
-    var newMessage = document.createElement("p");
-    newMessage.innerHTML = userMessage;
+    addMessage(userMessage)
 
-
-    mainBodyDiv.appendChild(newMessage);
-
-    messageDiv.appendChild(newMessage);
-    addDeleteButtonToMessage(messageDiv);
-    document.querySelector("#main-body").appendChild(messageDiv);
-
-    clearButton.removeAttribute("disabled")
   }
 })
 
