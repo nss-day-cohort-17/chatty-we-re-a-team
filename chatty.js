@@ -1,3 +1,5 @@
+var mainBodyDiv = document.querySelector("#main-body");
+
 document.querySelector("#message_id").addEventListener("keypress", (e) => {
   // console.log(e);
   if (e.key === "Enter") {
