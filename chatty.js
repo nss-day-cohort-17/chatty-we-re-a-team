@@ -1,10 +1,11 @@
 var mainBodyDiv = document.querySelector("#main-body");
 var bodyVar = document.querySelector("body");
+var userInput =document.querySelector("input")
+var editNode;
 var myRequest = new XMLHttpRequest();
 
 function parseJSON(e) {
   var data = JSON.parse(e.target.responseText)
-    console.log(data);
     for (var i = 0; i < data.messages.length; i++) {
       addMessage(data.messages[i].message)
       console.log(data.messages[i].message)
@@ -22,17 +23,20 @@ function addMessage(userInput){
   newMessage.innerHTML = userInput;
 
   messageDiv.appendChild(newMessage);
-  addDeleteButtonToMessage(messageDiv);
+  addButtonsToMessage(messageDiv);
   mainBodyDiv.appendChild(messageDiv);
 
   clearButton.removeAttribute("disabled")
  }
 
 
-function addDeleteButtonToMessage(divElement) {
+function addButtonsToMessage(divElement) {
   var deleteButton = document.createElement("button");
+  var editButton = document.createElement("button");
   deleteButton.textContent = "Delete";
   divElement.appendChild(deleteButton);
+  editButton.textContent = "Edit";
+  divElement.appendChild(editButton);
 
 }
 // Executed when a checkbox is clicked, checks to see if the checkbox has the attribute checked,
@@ -59,17 +63,17 @@ function toggleClass(checkbox) {
 
 }
 
-
-
-document.querySelector("#message_id").addEventListener("keypress", (e) => {
-  // console.log(e);
+function createMessage(e) {
   if (e.key === "Enter") {
-    var userMessage = document.querySelector("input").value;
-    document.querySelector("input").value = "";
+    var userMessage = userInput.value;
+    userInput.value = "";
     addMessage(userMessage)
-
   }
-})
+}
+
+
+
+userInput.addEventListener("keypress", createMessage)
 
  var clearButton = document.querySelector("#clear-messages")
   clearButton.addEventListener("click", () => {
@@ -78,19 +82,34 @@ document.querySelector("#message_id").addEventListener("keypress", (e) => {
 })
 
 
+function editButtonFunc(e) {
+    var char = userInput.value;
+    editNode.querySelector("p").innerHTML = char;
+    userInput.removeEventListener("keypress", createMessage)
+      if (e.key === "Enter") {
+        var char = userInput.value;
+        editNode.querySelector("p").innerHTML = char;
+        userInput.value = "";
+        userInput.addEventListener("keypress", createMessage)
+        userInput.removeEventListener("keypress", editButtonFunc)
 
-
-
+      }
+  }
 
 mainBodyDiv.addEventListener("click", (e) => {
-  if (e.target.tagName === "BUTTON") {
+  if (e.target.textContent === "Delete") {
     var buttonParent = e.target.parentNode;
     console.log(buttonParent);
     mainBodyDiv.removeChild(buttonParent);
     if (!mainBodyDiv.querySelector("div")) {
       clearButton.setAttribute("disabled", "disabled")
     }
-  }
+  }else if (e.target.textContent === "Edit"){
+    console.log("hey")
+    editNode = e.target.parentNode;
+    userInput.value = editNode.querySelector("p").innerHTML
+    userInput.addEventListener("keypress", editButtonFunc)
+    }
 })
 
 
