@@ -63,16 +63,17 @@ function toggleClass(checkbox) {
 
 }
 
-
-
-userInput.addEventListener("keypress", (e) => {
-  // console.log(e);
+function createMessage(e) {
   if (e.key === "Enter") {
     var userMessage = userInput.value;
     userInput.value = "";
     addMessage(userMessage)
   }
-})
+}
+
+
+
+userInput.addEventListener("keypress", createMessage)
 
  var clearButton = document.querySelector("#clear-messages")
   clearButton.addEventListener("click", () => {
