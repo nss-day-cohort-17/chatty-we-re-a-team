@@ -65,10 +65,10 @@ a.navbar-brand {
 
 div#main-body {
     margin: 0 auto;
-    width: 35%;
+    width: 40%;
     min-height: 20em;
-    border: 1px solid white;
-    margin-left: 455px;
+
+
 }
 
 .scrollme {
@@ -82,8 +82,9 @@ body {
 }
 
 div#checkB {
-  padding-left: 450px;
-  padding-top:45px;
+  padding-left: 420px;
+  font-size: 1em;
+
 }
 
 h3 {
@@ -101,7 +102,7 @@ p {
   margin: 0 auto;
   width: 75%;
   min-height: 10em;
-  border: 1px solid black;
+
 }
 
 /*#navBar {
@@ -142,5 +143,6 @@ label {
 }
 
 .large-text-class {
-  font-size: 10.5em;
+  font-size: 1.7em;
+
 }
