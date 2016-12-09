@@ -1,6 +1,5 @@
 
 
-
 /* New Nav Bar Styling*/
 
 
@@ -27,20 +26,48 @@
 }
 
 
+.btn-danger {
+    color: #fff;
+    background-color:#9E9E9E   ;
+    border-color: #9E9E9E    ;
+}
+
+
+button.btn-info.spacing {
+    color: #fff;
+    background-color:#00BCD4;
+    border-color:#00BCD4;
+    ;
+}
+
+
+h3.text-center {
+  font-family: 'Lato', sans-serif;
+  margin-top: 20px
+  margin-bottom: 20px;
+}
+
+
 button.btn.btn-default {
   margin-top: 3.5px;
 }
 
-a.navbar-brand {
-  color: teal;
-}
-
 
 .form-control {
-
-    padding: 6px 300px;
+    padding: 6px;
     margin-top: 5px;
 }
+
+
+input#message_id.form-control {
+    width: 485px;
+}
+
+
+button#clear-messages.btn.btn-danger {
+  margin-top: 5px;
+}
+
 
 .navbar-brand {
     float: left;
@@ -49,9 +76,22 @@ a.navbar-brand {
     font-size: 40px;
     line-height: 20px;
     padding-right: 175px;
-    padding-top: 20px;
     font-family: "Oleo Script", serif;
+    color: teal;
 }
+
+
+i.fa.fa-commenting {
+  display: inline;
+  margin-left: 6px;
+}
+
+a.dropdown-toggle {
+  font-size: 20px;
+}
+
+/* Body Stylings*/
+
 
 .image-bg-fluid-height {
     background-image: url("../AdobeStock_107574459.jpeg");
@@ -63,8 +103,6 @@ a.navbar-brand {
 }
 
 
-
-
 .scrollme {
     max-height:300px;
     overflow-y:auto;
@@ -72,28 +110,25 @@ a.navbar-brand {
 
 
 body {
-  background-color: lightgray;
+  font-family:'Lato', sans-serif;
 }
+
 
 div#checkB {
   margin-top: 3em;
   font-size: 1em;
-
+  margin-top: 60px;;
 }
 #no-top-margin {
   margin-top: 0;
 }
 
-h3 {
-  padding-left: 0px;
-  font-family: "Open Sans", serif
-  text-align: center;
-}
 
 p {
   display: inline;
   margin-right: 2em;
 }
+
 
 #main-body {
   margin: 0 auto;
@@ -102,49 +137,32 @@ p {
   overflow: scroll;
 }
 
-/*#navBar {
-  display: inline-block;
-  list-style-type: none;
-  text-align: center;
-  padding-top: 10px;
-  background-color: lightgray;*/
-}
-
-/*#message_id {
- border: 1px solid black;
-}
-
-#clear-messages {
- border: 1px solid black;
- border-radius: 10px;
-}
-
-#logo {
-  font-family: "Oleo Script", serif;
-  color: teal;
-  font-size: 30px*/
-
-}
 
 #checkB {
   padding-left: 30%;
 }
 
+
 label {
   padding-left: 1em;
 }
+
+
+/* Theme Stylings*/
+
 
 .dark-theme-class{
 
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-
 }
+
 
 .large-text-class p{
   font-size: 1.5em;
 
-}
+
+
 
 .spacing {
   margin-right: .5em;
