@@ -67,7 +67,6 @@ div#main-body {
     margin: 0 auto;
     width: 35%;
     min-height: 20em;
-    border: 1px solid white;
     margin-left: 455px;
 }
 
@@ -101,7 +100,6 @@ p {
   margin: 0 auto;
   width: 75%;
   min-height: 10em;
-  border: 1px solid black;
 }
 
 /*#navBar {
@@ -136,9 +134,13 @@ label {
   padding-left: 1em;
 }
 
-.dark-theme-class {
+#dark-themes{
+  text-align: center;
   background-color: black;
   color: white;
+  margin: 0;
+
+  padding: 0;
 }
 
 .large-text-class {
