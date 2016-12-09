@@ -1,5 +1,4 @@
 var mainBodyDiv = document.querySelector("#main-body");
-var bodyVar = document.querySelector("body");
 var userInput =document.querySelector("#message_id")
 var clearButton = document.querySelector("#clear-messages")
 var editNode;
@@ -58,9 +57,9 @@ function addAttribute(checkbox) {
 // then toggles the appropriate class
 function toggleClass(checkbox) {
   if (checkbox === darkTheme) {
-    mainBodyDiv.classList.toggle("dark-theme-class")
+    document.querySelector("#darkThemeThing").classList.toggle("dark-theme-class")
   } else {
-    bodyVar.classList.toggle("large-text-class")
+    mainBodyDiv.classList.toggle("large-text-class")
 
   }
 
@@ -72,6 +71,8 @@ function createMessage(e) {
     if (userMessage !== "") {
       addMessage(userMessage)
       userInput.value = "";
+
+      mainBodyDiv.scrollTop = mainBodyDiv.scrollHeight;
     }
   }
 }
