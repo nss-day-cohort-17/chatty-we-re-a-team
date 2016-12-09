@@ -1,5 +1,4 @@
 var mainBodyDiv = document.querySelector("#main-body");
-var bodyVar = document.querySelector("body");
 var userInput =document.querySelector("#message_id")
 var clearButton = document.querySelector("#clear-messages")
 var editNode;
