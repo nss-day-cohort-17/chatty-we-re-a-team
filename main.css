@@ -133,10 +133,9 @@ label {
 
 .dark-theme-class{
 
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  /*margin: 0;
-  padding: 0;*/
+
 }
 
 .large-text-class {
