@@ -63,13 +63,7 @@ a.navbar-brand {
 }
 
 
-div#main-body {
-    margin: 0 auto;
-    width: 40%;
-    min-height: 20em;
 
-
-}
 
 .scrollme {
     max-height:300px;
@@ -100,8 +94,8 @@ p {
 
 #main-body {
   margin: 0 auto;
-  width: 75%;
-  min-height: 10em;
+  width: 40%;
+  height: 20em;
 
 }
 
@@ -137,9 +131,13 @@ label {
   padding-left: 1em;
 }
 
-.dark-theme-class {
+#dark-themes{
+  text-align: center;
   background-color: black;
   color: white;
+  margin: 0;
+
+  padding: 0;
 }
 
 .large-text-class {
