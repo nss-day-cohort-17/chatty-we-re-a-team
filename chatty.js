@@ -38,7 +38,7 @@ function addButtonsToMessage(divElement) {
   deleteButton.classList.add("btn-danger")
   divElement.appendChild(deleteButton);
   editButton.textContent = "Edit";
-  editButton.classList.add("btn-info")
+  editButton.classList.add("btn-info", "spacing")
   divElement.appendChild(editButton);
 
 }
@@ -58,7 +58,7 @@ function addAttribute(checkbox) {
 // then toggles the appropriate class
 function toggleClass(checkbox) {
   if (checkbox === darkTheme) {
-    bodyVar.classList.toggle("dark-theme-class")
+    mainBodyDiv.classList.toggle("dark-theme-class")
   } else {
     bodyVar.classList.toggle("large-text-class")
 

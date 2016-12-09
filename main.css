@@ -96,7 +96,7 @@ p {
   margin: 0 auto;
   width: 40%;
   height: 20em;
-
+  overflow-x: scroll;
 }
 
 /*#navBar {
@@ -131,16 +131,19 @@ label {
   padding-left: 1em;
 }
 
-#dark-themes{
-  text-align: center;
+.dark-theme-class{
+
   background-color: black;
   color: white;
-  margin: 0;
-
-  padding: 0;
+  /*margin: 0;
+  padding: 0;*/
 }
 
 .large-text-class {
   font-size: 1.7em;
 
+}
+
+.spacing {
+  margin-right: .5em;
 }
