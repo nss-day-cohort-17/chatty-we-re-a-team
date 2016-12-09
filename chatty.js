@@ -120,6 +120,7 @@ mainBodyDiv.addEventListener("click", (e) => {
   }else if (e.target.textContent === "Edit"){
     editNode = e.target.parentNode;
     userInput.value = editNode.querySelector("p").innerHTML
+    userInput.focus();
     userInput.addEventListener("keyup", editButtonFunc)
     }
 })
