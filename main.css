@@ -38,9 +38,15 @@ a.navbar-brand {
 
 .form-control {
 
-    padding: 6px 300px;
+    padding: 6px;
     margin-top: 5px;
 }
+
+input#clear-messages.form-control {
+    width: 630px;
+
+}
+
 
 .navbar-brand {
     float: left;
@@ -61,7 +67,6 @@ a.navbar-brand {
     background-position: center;
     min-height: 100%;
 }
-
 
 
 

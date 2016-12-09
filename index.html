@@ -17,12 +17,13 @@
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+
+    <div class="navbar-header col-sm-1">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
+       <!--  <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> -->
       </button>
       <a class="navbar-brand" href="#">Chatty</a>
     </div>
@@ -34,12 +35,17 @@
         <li><a href="#">Link</a></li> -->
 
       </ul>
-      <div class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" id="message_id" class="form-control" placeholder="Enter message here">
-        </div>
+      <form class="navbar-form">
+        <div class="form-group col-sm-7 col-sm-offset-2">
+
+          <input type="text" id="clear-messages" class="form-control" placeholder="Enter message here">
+
         <button type="submit" id="clear-messages" class="btn btn-danger">Clear all messages</button>
       </div>
+    </form>
+
+
+      <div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/nss-day-cohort-17/chatty-we-re-a-team/tree/master"><i class="fa fa-github fa-2x"   aria-hidden="true"></i></a>
         </li>
@@ -61,7 +67,7 @@
 <br>
   <br>
   <br>
-    
+
       <div id="checkB">
         <label for="dark-theme">DarkTheme</label>
         <input type="checkbox" id="dark-theme" name="Dark theme">
@@ -70,7 +76,7 @@
       </div>
       <h3 class="text-center">Messages:</h3>
       <div id="main-body"></div>
-    
+
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
