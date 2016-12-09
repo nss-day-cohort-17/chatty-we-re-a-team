@@ -1,3 +1,4 @@
+<!-- Chatty Group Project -->
 
 <!DOCTYPE html>
 <html>
@@ -5,77 +6,69 @@
         <title>Chatty</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oleo+Script">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
-
         <link rel="stylesheet" type="text/css" href="main.css">
-
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 
 <body class="image-bg-fluid-height img-responsive img-center">
 
-<nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
-  <div class="container-fluid">
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
+    <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
 
     <div class="navbar-header col-sm-1">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-       <!--  <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> -->
+      <span class="sr-only">Toggle navigation</span>
       </button>
-      <a class="navbar-brand" href="#">Chatty</a>
     </div>
+
+    <div class="col-sm-1">
+      <a class="navbar-brand" href="#">Chatty<i class="fa fa-commenting" aria-hidden="true"></i></a>
+    </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li> -->
-
       </ul>
       <form class="navbar-form">
-        <div class="form-group col-sm-7 col-sm-offset-2">
-
-          <input type="text" id="clear-messages" class="form-control" placeholder="Enter message here">
-
-        <button type="submit" id="clear-messages" class="btn btn-danger">Clear all messages</button>
-      </div>
-    </form>
+    <div class="form-group col-sm-7 col-sm-offset-1">
+         <input type="text" id="clear-messages" class="form-control" placeholder="Enter message here">
+         <button type="submit" id="clear-messages" class="btn btn-danger">Clear all messages</button>
+    </div>
+      </form>
 
 
-      <div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/nss-day-cohort-17/chatty-we-re-a-team/tree/master"><i class="fa fa-github fa-2x"   aria-hidden="true"></i></a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Developers<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">James West</a></li>
-            <li><a href="#">Ashley Irwin</a></li>
-            <li><a href="#">Alana Smith</a></li>
-            <li><a href="#">Ben Conner</a></li>
-          </ul>
-        </li>
+
+      <ul class="nav navbar-nav col-sm-2 col-sm-offset-1">
+          <li><a href="https://github.com/nss-day-cohort-17/chatty-we-re-a-team/tree/master"><i class="fa fa-github fa-2x"   aria-hidden="true"></i></a>
+          </li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Developers <span class="caret"></span></a>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+      <ul class="dropdown-menu">
+          <li><a href="https://j-west.github.io/">James West</a></li>
+          <li><a href="https://ashleyirwin3.github.io/">Ashley Irwin</a></li>
+          <li><a href="https://missalana00.github.io/">Alana Smith</a></li>
+          <li><a href="https://benconner.github.io/">Ben Conner</a></li>
+      </ul>
+
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
 </nav>
 
 
-<br>
-  <br>
-  <br>
-
       <div id="checkB">
-        <label for="dark-theme">DarkTheme</label>
-        <input type="checkbox" id="dark-theme" name="Dark theme">
-        <label for="large-text">Large Text</label>
-        <input type="checkbox" id="large-text" name="Large text">
+          <label for="dark-theme">DarkTheme</label>
+          <input type="checkbox" id="dark-theme" name="Dark theme">
+          <label for="large-text">Large Text</label>
+          <input type="checkbox" id="large-text" name="Large text">
       </div>
-      <h3 class="text-center">Messages:</h3>
-      <div id="main-body"></div>
+          <h3 class="text-center">Messages:</h3>
+      <div id="main-body">
+      </div>
 
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
