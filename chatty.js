@@ -69,9 +69,10 @@ function toggleClass(checkbox) {
 function createMessage(e) {
   if (e.key === "Enter") {
     var userMessage = userInput.value;
-    addMessage(userMessage)
-    userInput.value = "";
-
+    if (userMessage !== "") {
+      addMessage(userMessage)
+      userInput.value = "";
+    }
   }
 }
 
