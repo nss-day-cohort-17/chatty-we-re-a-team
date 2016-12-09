@@ -1,6 +1,7 @@
 var mainBodyDiv = document.querySelector("#main-body");
 var bodyVar = document.querySelector("body");
-var userInput =document.querySelector("#usersMessage")
+var userInput =document.querySelector("#message_id")
+var clearButton = document.querySelector("#clear-messages")
 var editNode;
 var myRequest = new XMLHttpRequest();
 
@@ -72,15 +73,15 @@ function createMessage(e) {
   }
 }
 
-
+function clearAllMessages() {
+  mainBodyDiv.innerHTML = "";
+  clearButton.setAttribute("disabled", "disabled")
+}
 
 userInput.addEventListener("keypress", createMessage)
 
- var clearButton = document.querySelector("#clear-messages")
-  clearButton.addEventListener("click", () => {
-  mainBodyDiv.innerHTML = "";
-  clearButton.setAttribute("disabled", "disabled")
-})
+
+clearButton.addEventListener("click", clearAllMessages)
 
 function finishEditFunc(e) {
   if (e.key === "Enter") {
@@ -114,7 +115,6 @@ mainBodyDiv.addEventListener("click", (e) => {
       clearButton.setAttribute("disabled", "disabled")
     }
   }else if (e.target.textContent === "Edit"){
-    console.log("hey")
     editNode = e.target.parentNode;
     userInput.value = editNode.querySelector("p").innerHTML
     userInput.addEventListener("keyup", editButtonFunc)
