@@ -57,9 +57,9 @@ function addAttribute(checkbox) {
 // then toggles the appropriate class
 function toggleClass(checkbox) {
   if (checkbox === darkTheme) {
-    mainBodyDiv.classList.toggle("dark-theme-class")
+    document.querySelector("#darkThemeThing").classList.toggle("dark-theme-class")
   } else {
-    bodyVar.classList.toggle("large-text-class")
+    mainBodyDiv.classList.toggle("large-text-class")
 
   }
 
