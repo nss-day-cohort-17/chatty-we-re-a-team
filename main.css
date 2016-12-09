@@ -59,7 +59,7 @@ button.btn.btn-default {
 }
 
 
-input#clear-messages.form-control {
+input#message_id.form-control {
     width: 485px;
 }
 
