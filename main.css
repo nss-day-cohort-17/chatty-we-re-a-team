@@ -76,9 +76,12 @@ body {
 }
 
 div#checkB {
-  padding-left: 420px;
+  margin-top: 3em;
   font-size: 1em;
 
+}
+#no-top-margin {
+  margin-top: 0;
 }
 
 h3 {
@@ -94,9 +97,9 @@ p {
 
 #main-body {
   margin: 0 auto;
-  width: 40%;
-  height: 20em;
-  overflow-x: scroll;
+  width: 39em;
+  height: 25.6em;
+  overflow: scroll;
 }
 
 /*#navBar {
@@ -138,11 +141,17 @@ label {
 
 }
 
-.large-text-class {
-  font-size: 1.7em;
+.large-text-class p{
+  font-size: 1.5em;
 
 }
 
 .spacing {
   margin-right: .5em;
+}
+
+#darkThemeThing {
+  height: 31.9em;
+  width: 42em;
+  margin-left: 30em;
 }
