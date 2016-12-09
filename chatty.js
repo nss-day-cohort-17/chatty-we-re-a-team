@@ -71,6 +71,8 @@ function createMessage(e) {
     if (userMessage !== "") {
       addMessage(userMessage)
       userInput.value = "";
+
+      mainBodyDiv.scrollTop = mainBodyDiv.scrollHeight;
     }
   }
 }
