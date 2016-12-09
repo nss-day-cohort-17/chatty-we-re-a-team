@@ -22,9 +22,9 @@ function addMessage(userInput){
   var messageDiv = document.createElement("div");
   var newMessage = document.createElement("p");
   newMessage.innerHTML = userInput;
-
-  messageDiv.appendChild(newMessage);
   addButtonsToMessage(messageDiv);
+  messageDiv.appendChild(newMessage);
+  // addButtonsToMessage(messageDiv);
   mainBodyDiv.appendChild(messageDiv);
 
   clearButton.removeAttribute("disabled")
@@ -35,8 +35,10 @@ function addButtonsToMessage(divElement) {
   var deleteButton = document.createElement("button");
   var editButton = document.createElement("button");
   deleteButton.textContent = "Delete";
+  deleteButton.classList.add("btn-danger")
   divElement.appendChild(deleteButton);
   editButton.textContent = "Edit";
+  editButton.classList.add("btn-info")
   divElement.appendChild(editButton);
 
 }
