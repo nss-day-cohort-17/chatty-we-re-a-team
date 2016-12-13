@@ -1,6 +1,6 @@
-var mainBodyDiv = document.querySelector("#main-body");
-var userInput =document.querySelector("#message_id")
-var clearButton = document.querySelector("#clear-messages")
+var mainBodyDiv = $("#main-body")
+var userInput = $("#message_id")
+var clearButton = $("#clear-messages")
 var editNode;
 var myRequest = new XMLHttpRequest();
 
@@ -18,37 +18,37 @@ myRequest.send();
 
 function addMessage(userInput){
 
-  var messageDiv = document.createElement("div");
-  var newMessage = document.createElement("p");
-  newMessage.innerHTML = userInput;
+  var messageDiv = $("<div></div>");
+  var newMessage = $("<p></p>").html(userInput).appendTo(messageDiv);
+  // newMessage.innerHTML = userInput;
   addButtonsToMessage(messageDiv);
-  messageDiv.appendChild(newMessage);
+  // messageDiv.appendChild(newMessage);
   // addButtonsToMessage(messageDiv);
   mainBodyDiv.appendChild(messageDiv);
 
-  clearButton.removeAttribute("disabled")
+  clearButton.removeAttr("disabled")
  }
 
 
 function addButtonsToMessage(divElement) {
-  var deleteButton = document.createElement("button");
-  var editButton = document.createElement("button");
-  deleteButton.textContent = "Delete";
-  deleteButton.classList.add("btn-danger")
-  divElement.appendChild(deleteButton);
-  editButton.textContent = "Edit";
-  editButton.classList.add("btn-info", "spacing")
-  divElement.appendChild(editButton);
+  var deleteButton = $("<button class = 'btn-danger'>Delete</button>").appendTo(divElement);
+  var editButton = $("<button class = 'btn-info spacing'>Edit</button>").appendTo(divElement);
+  // deleteButton.textContent = "Delete";
+  // deleteButton.classList.add("btn-danger")
+  // divElement.appendChild(deleteButton);
+  // editButton.textContent = "Edit";
+  // editButton.classList.add("btn-info", "spacing")
+  // divElement.appendChild(editButton);
 
 }
 // Executed when a checkbox is clicked, checks to see if the checkbox has the attribute checked,
 // if it does not, the function adds it to the checkbox, then calls toggleClass function with checkbox as argument,  // which is from the eventListener, so checkbox will either be darkTheme or largeText
 function addAttribute(checkbox) {
   if (!checkbox.hasAttribute("checked")) {
-    checkbox.setAttribute("checked", true);
+    checkbox.attr("checked", true);
     toggleClass(checkbox);
   } else {
-    checkbox.removeAttribute("checked");
+    checkbox.removeAttr("checked");
     toggleClass(checkbox);
   }
 }
@@ -57,9 +57,9 @@ function addAttribute(checkbox) {
 // then toggles the appropriate class
 function toggleClass(checkbox) {
   if (checkbox === darkTheme) {
-    document.querySelector("#darkThemeThing").classList.toggle("dark-theme-class")
+    $("#darkThemeThing").addClass("dark-theme-class")
   } else {
-    mainBodyDiv.classList.toggle("large-text-class")
+    mainBodyDiv.removeClass("large-text-class")
 
   }
 
